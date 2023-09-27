@@ -1,0 +1,130 @@
+
+.cross {
+    position: fixed;
+    left: 32.5%;
+    top: 2.5rem;
+    color: black;
+    z-index: 30;
+    display: flex;
+    transform: translateX(0);
+    animation: openCross 1s ease-in-out;
+    cursor: pointer;
+}
+@media (max-width: 600px) {
+    .cross {
+        left: 80%;
+    }
+}
+@keyframes openCross {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.card {
+    width: 290px;
+    height: 150px;
+    background: rgb(17, 4, 134);
+    border-radius: 15px;
+    box-shadow: rgb(0,0,0,0.7) 5px 10px 50px ,rgb(0,0,0,0.7) -5px 0px 250px;
+    display: flex;
+    color: white;
+    position: absolute;
+    flex-direction: column;
+    background: linear-gradient(to right, rgb(20, 30, 48), rgb(36, 59, 85));
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    z-index: 999999;
+    text-align: center;
+}
+
+.card:hover {
+    box-shadow: rgb(0,0,0) 5px 10px 50px ,rgb(0,0,0) -5px 0px 250px;
+}
+
+.title {
+    font-size: 40px;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+.text {
+    font-style: italic;
+    font-size: 14px;
+    margin-top: 0px;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.moon {
+    font-size: 20px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover > .moon {
+    font-size: 23px;
+}
+.cardCross {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; 
+    background: url("/images/loupe.png") no-repeat right center; 
+    background-size: contain;
+    padding-right: 55px; 
+    padding-left: 10px;
+    option {
+        font-size: small;
+    }
+}
+
+.retour {
+    background: transparent; 
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    padding-left: 2%;
+    padding-right: 2%;
+    height: 2.5rem;
+    top: 2.5rem;
+    right: 17.5%;
+    color: black;
+    position: fixed;
+    z-index: 30;
+}
+@media (max-width: 600px) {
+    .retour {
+        color: transparent;
+        top: 10px;
+        left: 10px;
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        background-image: url(/images/maisonLogo.png);
+        background-size: cover;
+    }
+    .select {
+        padding-right: 0;
+        width: auto;
+        transform: translateX(-50%);
+    }
+}

@@ -1,0 +1,47 @@
+.title {
+  color: #c3a343;
+  -webkit-text-fill-color: transparent;
+  background: radial-gradient(
+      ellipse farthest-corner at right bottom,
+      #fedb37 0%,
+      #fdb931 8%,
+      #9f7928 30%,
+      #8a6e2f 40%,
+      transparent 80%
+    ),
+    radial-gradient(
+      ellipse farthest-corner at left top,
+      #ffffff 0%,
+      #ffffac 8%,
+      #d1b464 25%,
+      #5d4a1f 62.5%,
+      #5d4a1f 100%
+    );
+  text-shadow: -1px -1px 1px;
+  background-clip: text;
+  z-index: -1;
+}
+.nav {
+  width: 93%;
+  position: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 7rem;
+  z-index: 30;
+  top: 0;
+  place-content: space-between
+}
+@media (max-width: 600px) {
+  .nav {
+    width: 100%;
+    .svg1, .svg2, .svg3 {
+      display: none;
+    }
+  }
+  .titleContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}

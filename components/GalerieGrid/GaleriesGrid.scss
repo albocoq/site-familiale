@@ -1,0 +1,106 @@
+.gallery {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem 0rem;
+  margin-right: 9rem;
+  z-index: 9999999;
+}
+@media (max-width: 1749px) {
+  .gallery {
+    // grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 1329px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 942px) {
+  .gallery {
+    grid-template-columns: none;
+  }
+}
+@media (max-width: 600px) {
+  .overlayer{
+    display: none;
+  }
+  .gallery {
+    padding-top: 11rem;
+    margin-right: 0;
+  }
+  .bglayer {
+    background-image: none;
+  }
+  .info {
+    display: none;
+  }
+}
+.bglayer {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-image: url(/images/WallPicturesbg.webp);
+  background-size: cover;
+  background-position: bottom right;
+  opacity: 1;
+}
+.overlayer {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-image: url(/images/WallPicturesbg.webp);
+  background-size: cover;
+  background-position: bottom left;
+  z-index: 10;
+  mask-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 5%, rgba(0, 0, 0, 0) 5%);
+  -webkit-mask-image: linear-gradient(0deg,#000 5%,transparent 0),linear-gradient(180deg,#000000ff 13%,#00000020 14% , #20202000 0);
+  opacity: 1;
+}
+.info {
+  animation: moove 5s linear;
+}
+
+@keyframes moove {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(1.25);
+  }
+  20% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.25);
+  }
+  40% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  60% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.25);
+  }
+  80% {
+    transform: scale(1);
+  }
+  90% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
