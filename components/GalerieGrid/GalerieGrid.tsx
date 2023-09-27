@@ -1,4 +1,4 @@
-import { getGalerie, getNames, getText, getInfo } from '../../app/(autre)/libs/getInfo'
+import { getGalerie, getNames, getText } from '../../app/(autre)/libs/getInfo'
 
 import './GaleriesGrid.scss'
 
